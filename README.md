@@ -8,11 +8,11 @@ yarn install
 yarn serve --open
 ~~~
 
-## Vuex 4.0 (beta)
+### Vuex 4.0 (beta)
 * https://github.com/vuejs/vuex/tree/4.0
 
-## vue-router 4.0 (alpha)
+### vue-router 4.0 (alpha)
 * https://github.com/vuejs/vue-router-next
 
-## 참조 
+### 참조 
 * https://github.com/chenxeed/vue3-boilerplate/blob/master/src/App.vue
