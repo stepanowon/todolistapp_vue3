@@ -8,6 +8,10 @@ yarn install
 yarn serve --open
 ~~~
 
+### vue 3.0 (beta)
+* https://composition-api.vuejs.org/
+* https://github.com/vuejs/vue-cli-plugin-vue-next
+
 ### Vuex 4.0 (beta)
 * https://github.com/vuejs/vuex/tree/4.0
 
@@ -15,4 +19,4 @@ yarn serve --open
 * https://github.com/vuejs/vue-router-next
 
 ### 참조 
-* https://github.com/chenxeed/vue3-boilerplate/blob/master/src/App.vue
+* https://github.com/chenxeed/vue3-boilerplate
