@@ -1,11 +1,13 @@
 <template>
-    <li :class="checked(todoitem.done)" :title="'설명 : ' + todoitem.desc" @click="toggleDone(todoitem.id)">
-        <span :class="{ pointer:true, 'todo-done':todoitem.done }">
+    <li :class="checked(todoitem.done)" @click="toggleDone(todoitem.id)">
+        <span :class="{ pointer:true, 'todo-done':todoitem.done }" :title="'설명 : ' + todoitem.desc">
             {{todoitem.todo}}
             {{todoitem.done ? " (완료)" : ""}}
         </span>
-        <span class="float-right badge badge-secondary pointer" @click.stop="deleteTodo(todoitem.id)">삭제</span>
-        <span class="float-right badge badge-secondary pointer" @click.stop="editTodo(todoitem.id)">편집</span>
+        <div class="float-right">
+            <span class="badge badge-secondary pointer ml-1" @click.stop="editTodo(todoitem.id)">edit</span> 
+            <span class="badge badge-secondary pointer ml-1" @click.stop="deleteTodo(todoitem.id)">delete</span>
+        </div>
     </li>
 </template>
 
