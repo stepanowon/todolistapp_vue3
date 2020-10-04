@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col p-3">
-        <h2>연락처 변경</h2>
+        <h2>할일 내용 변경</h2>
       </div>
     </div>
     <div class="row">
@@ -40,7 +40,8 @@ export default {
         const router = useRouter();
         const currentRoute = useRoute();
 
-        const todoitem = store.state.todolist.find((item)=> item.id === parseInt(currentRoute.params.id, 10))
+        const todoitem = store.state.todolist.find((item)=> item.id === currentRoute.params.id)
+        console.log
         const state = reactive({ 
             todoitemlocal : { ...todoitem } 
         });

@@ -5,8 +5,8 @@
             {{todoitem.done ? " (완료)" : ""}}
         </span>
         <div class="float-right">
-            <span class="badge badge-secondary pointer ml-1" @click.stop="editTodo(todoitem.id)">edit</span> 
-            <span class="badge badge-secondary pointer ml-1" @click.stop="deleteTodo(todoitem.id)">delete</span>
+            <span class="badge badge-secondary pointer ml-1" @click.stop="editTodo(todoitem.id)">편집</span> 
+            <span class="badge badge-secondary pointer ml-1" @click.stop="deleteTodo(todoitem.id)">삭제</span>
         </div>
     </li>
 </template>

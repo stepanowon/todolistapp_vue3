@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col p-3">
-        <h2>연락처 추가</h2>
+        <h2>할일 추가</h2>
       </div>
     </div>
     <div class="row">
@@ -40,8 +40,12 @@ export default {
         });
 
         const addTodo = () => {
+          if (state.todoitemlocal.todo.trim().length >= 2) {
             store.dispatch(Constant.ADD_TODO, { todoitem : state.todoitemlocal })
             router.push({ name:"todoList" });
+          } else {
+            alert('할일을 2글자 이상으로 입력해주세요');
+          }
         }
         const cancel = () => {
             router.push({ name:"todoList"});

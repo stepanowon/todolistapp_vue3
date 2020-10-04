@@ -1,18 +1,19 @@
 import Vuex from "vuex";
 import Constant from '../Constant';
+import shortid from 'shortid';
 
 export default Vuex.createStore({
     state: {
         todolist : [
-            { "id":4,"todo":"야구장","desc":"프로야구 경기도 봐야합니다.","done":false},
-            { "id":3,"todo":"놀기","desc":"노는 것도 중요합니다.","done":true},
-            { "id":2,"todo":"Vue 학습","desc":"Vue 학습을 해야 합니다","done":false},
-            { "id":1,"todo":"ES6 공부","desc":"ES6공부를 해야 합니다","done":false}
+            { "id":shortid.generate(),"todo":"야구장","desc":"프로야구 경기도 봐야합니다.","done":false},
+            { "id":shortid.generate(),"todo":"놀기","desc":"노는 것도 중요합니다.","done":true},
+            { "id":shortid.generate(),"todo":"Vue 학습","desc":"Vue 학습을 해야 합니다","done":false},
+            { "id":shortid.generate(),"todo":"ES6 공부","desc":"ES6공부를 해야 합니다","done":false}
         ]
     },
     mutations : {
         [Constant.ADD_TODO] :(state,payload)=> {
-            state.todolist.push({ ...payload.todoitem, id: new Date().getTime(), done:false });
+            state.todolist.push({ ...payload.todoitem, id: shortid.generate(), done:false });
             state.todoitem = { id:"", todo:"", desc:"", done:false };
         },
         [Constant.DELETE_TODO] :(state,payload)=> {
